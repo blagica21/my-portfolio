@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../../../OneDrive%20-%20UKIM,%20FINKI/Desktop/src.zip/dom1.css">
+    <style>
+        section { display: none; }
+        section.active { display: block; }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>My Portfolio</h1>
+        <ul>
+            <li><a href="#" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#" onclick="showSection('education')">Education</a></li>
+            <li><a href="#" onclick="showSection('hobbies')">Hobbies</a></li>
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about" class="active">
+    <h2>About Me</h2>
+    <p>I am currently a student at FINKI, where I am studying PIT. I’ve had an interest in technology and design from an early age, and I began learning web development on my own even before starting any formal education.
+
+        Previously, I taught myself the basics of HTML, CSS, and JavaScript through online resources, tutorials, and small personal projects. This early experience helped me build a solid foundation and develop a strong curiosity for how websites work.
+
+        Now, I am expanding my knowledge through structured learning and more advanced projects. I practiced responsive design, user interface structure, and basic interactivity. I also continue to experiment with new technologies and stay updated on modern web development trends.
+
+        . I’m committed to growing as a developer and look forward to contributing to meaningful digital projects in the future.</p>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li>High School: SOU "Ljupco Santov" - Kocani</li>
+        <li>University: „Sv. Kiril i Metodij" - Skopje</li>
+        <li>Faculty: FINKI, PIT</li>
+    </ul>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies</h2>
+    <p>In my free time, I enjoy doing nail art because it allows me to be creative and experiment with different styles and colors. Besides that, I also like designing and creating my own web templates. This helps me improve my web design skills while having fun building unique and personalized projects.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (basic)</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 | Personal Website</p>
+</footer>
+
+<script>
+    function showSection(id) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+</body>
+</html>
